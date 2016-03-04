@@ -4,6 +4,7 @@ author: "Zanin Pavel"
 date: "March 5, 2016"
 output: html_document
 ---
+[Link to project on GitHUB](https://github.com/Filareth2015/Exploratory-Data-Analysis-Course-Project)
 
 ## Synopsis
 
