@@ -119,17 +119,9 @@ SCC &lt;- readRDS(&quot;./data/Source_Classification_Code.rds&quot;)</code></pre
 </div>
 <div id="question-1---have-total-emissions-from-pm_2.5-decreased-in-the-united-states-from-1999-to-2008" class="section level3">
 <h3>Question 1 - Have total emissions from <span class="math">\(PM_{2.5}\)</span> decreased in the United States from 1999 to 2008?</h3>
-<pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## Warning: package 'dplyr' was built under R version 3.2.3</code></pre>
-<pre><code>## 
-## Attaching package: 'dplyr'</code></pre>
-<pre><code>## The following objects are masked from 'package:stats':
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre class="r"><code># Defining total emissions per year
+<pre class="r"><code>library(dplyr)
+
+# Defining total emissions per year
 TotalEmissions &lt;- 
                   NEI %&gt;% 
                   group_by(year) %&gt;%
@@ -168,9 +160,9 @@ barplot(height = TotalEmissions$SumEmissions,
 <div id="question-3---of-the-four-types-of-sources-indicated-by-the-type-point-nonpoint-onroad-nonroad-variable-which-of-these-four-sources-have-seen-decreases-in-emissions-from-1999-2008-for-baltimore-city-which-have-seen-increases-in-emissions-from-1999-2008" class="section level3">
 <h3>Question 3 - Of the four types of sources indicated by the type (point, nonpoint, onroad, nonroad) variable, which of these four sources have seen decreases in emissions from 1999-2008 for Baltimore City? Which have seen increases in emissions from 1999-2008?</h3>
 <pre class="r"><code>library(dplyr)
-library(ggplot2)</code></pre>
-<pre><code>## Warning: package 'ggplot2' was built under R version 3.2.3</code></pre>
-<pre class="r"><code># Defining total emissions in the Baltimore City, Maryland by types per year
+library(ggplot2)
+
+# Defining total emissions in the Baltimore City, Maryland by types per year
 TotalEmissions &lt;- 
   NEI %&gt;% 
   filter(fips == 24510) %&gt;%
